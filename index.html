@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>8011 Wayi - 2026 Robot Technical Binder</title>
+    <meta
+      name="description"
+      content="Bilingual technical binder for FRC Team 8011 Guangzhou WA-YI 2026 robot."
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260720-systemdetail1" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="8011 Wayi home">
+        <span class="brand-mark">
+          <img src="./assets/team-8011-logo-web.png" alt="Team 8011 Guangzhou WA-YI logo" />
+        </span>
+        <span class="brand-text">
+          <strong>Wayi</strong>
+          <small>2026 Robot Binder</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#robot" data-i18n="navRobot">整机</a>
+        <a href="#video" data-i18n="navVideo">视频</a>
+        <a href="#systems" data-i18n="navSystems">机构</a>
+        <a href="#iterations" data-i18n="navIterations">迭代</a>
+        <a href="#software" data-i18n="navSoftware">软件</a>
+        <a href="http://43.138.214.227/" target="_blank" rel="noreferrer" data-i18n="navScouting">侦察系统</a>
+        <a href="#resources" data-i18n="navResources">资源</a>
+      </nav>
+      <button class="lang-button" id="langToggle" type="button">EN</button>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="robot" aria-labelledby="heroTitle">
+        <div class="hero-heading">
+          <p class="eyebrow" data-i18n="heroKicker">FRC Team 8011 / 广州哇一 / Founded 2019</p>
+          <h1 id="heroTitle">WAYI 2026</h1>
+          <p data-i18n="heroText">
+            以完整 CAD 为主视觉，鼠标移动到不同机构时保留整机轮廓，并突出当前模块，方便队员和访客按结构理解机器人。
+          </p>
+        </div>
+
+        <div class="robot-board" data-active-system="full">
+          <div class="board-title">
+            <span data-i18n="boardLabel">Technical overview</span>
+            <strong data-i18n="boardTitle">Robot architecture</strong>
+          </div>
+          <div class="board-logo" aria-hidden="true">
+            <img src="./assets/team-8011-logo-web.png" alt="" />
+          </div>
+          <div class="cad-stage" aria-label="Annotated robot CAD overview">
+            <div class="cad-model" aria-hidden="true">
+              <img class="cad-image cad-image-full active" data-system="full" src="./assets/generated-renders/robot-full-sw.png?v=20260719-sameview2" alt="" />
+              <img class="cad-image" data-system="drive" src="./assets/generated-renders/robot-drive-sw-composite.png?v=20260719-sameview2" alt="" />
+              <img class="cad-image" data-system="pickup" src="./assets/generated-renders/robot-pickup-sw-composite.png?v=20260719-sameview2" alt="" />
+              <img class="cad-image" data-system="hopper" src="./assets/generated-renders/robot-hopper-sw-composite.png?v=20260719-sameview2" alt="" />
+              <img class="cad-image" data-system="shooter" src="./assets/generated-renders/robot-shooter-sw-composite.png?v=20260719-sameview2" alt="" />
+            </div>
+
+            <svg class="cad-connectors" viewBox="0 0 1610 882" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <g class="cad-connector" data-system="hopper">
+                <polyline points="350,235 430,235 525,310" />
+                <circle cx="525" cy="310" r="6" />
+              </g>
+              <g class="cad-connector" data-system="pickup">
+                <polyline points="350,420 445,420 555,485" />
+                <circle cx="555" cy="485" r="6" />
+              </g>
+              <g class="cad-connector" data-system="drive">
+                <polyline points="350,640 470,640 665,590" />
+                <circle cx="665" cy="590" r="6" />
+              </g>
+              <g class="cad-connector" data-system="shooter">
+                <polyline points="1260,285 1080,285 865,335" />
+                <circle cx="865" cy="335" r="6" />
+              </g>
+            </svg>
+
+            <div class="cad-hit-map">
+              <button class="hotspot hotspot-drive" type="button" data-system="drive" aria-label="Highlight drivetrain"></button>
+              <button class="hotspot hotspot-hopper" type="button" data-system="hopper" aria-label="Highlight hopper mechanism"></button>
+              <button class="hotspot hotspot-shooter" type="button" data-system="shooter" aria-label="Highlight shooter"></button>
+              <button class="hotspot hotspot-pickup" type="button" data-system="pickup" aria-label="Highlight pickup mechanism"></button>
+            </div>
+
+            <article class="callout callout-drive" data-system="drive">
+              <span>01</span>
+              <strong data-i18n="driveCalloutTitle">Drivetrain</strong>
+              <p data-i18n="driveCalloutText">四角 swerve 底盘、底板开孔、电控空间和上层机构安装基准。</p>
+            </article>
+            <article class="callout callout-pickup" data-system="pickup">
+              <span>02</span>
+              <strong data-i18n="pickupCalloutTitle">Pickup</strong>
+              <p data-i18n="pickupCalloutText">前端拾取机构独立展示，用于说明球进入机器人的第一段路径。</p>
+            </article>
+            <article class="callout callout-hopper" data-system="hopper">
+              <span>03</span>
+              <strong data-i18n="hopperCalloutTitle">Hopper</strong>
+              <p data-i18n="hopperCalloutText">内部整理与转运结构，解释球如何被导向射球机构。</p>
+            </article>
+            <article class="callout callout-shooter" data-system="shooter">
+              <span>04</span>
+              <strong data-i18n="shooterCalloutTitle">Shooter</strong>
+              <p data-i18n="shooterCalloutText">双滚筒射球结构、侧板支撑和发射角度预留。</p>
+            </article>
+          </div>
+          <div class="system-tabs" aria-label="Robot subsystem selector">
+            <button class="system-tab" type="button" data-system="drive">
+              <span>01</span>
+              <strong data-i18n="tabDrive">底盘</strong>
+            </button>
+            <button class="system-tab" type="button" data-system="pickup">
+              <span>02</span>
+              <strong data-i18n="tabPickup">拾取</strong>
+            </button>
+            <button class="system-tab" type="button" data-system="hopper">
+              <span>03</span>
+              <strong data-i18n="tabHopper">转运</strong>
+            </button>
+            <button class="system-tab" type="button" data-system="shooter">
+              <span>04</span>
+              <strong data-i18n="tabShooter">射球</strong>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-feature" id="video">
+        <div class="section-copy video-copy">
+          <p class="eyebrow" data-i18n="videoKicker">Robot film</p>
+          <h2 data-i18n="videoTitle">机器人宣传视频</h2>
+          <p data-i18n="videoText">
+            这里放置 8011 机器人宣传片，用真实运行画面补充 CAD 技术展示，让访客同时看到设计结构和赛场表现。
+          </p>
+        </div>
+        <div class="video-frame">
+          <video controls preload="metadata" poster="./assets/team-8011-promo-poster.jpg" aria-label="Team 8011 robot promotional video">
+            <source src="./assets/team-8011-promo.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Team facts">
+        <article><strong>8011</strong><span data-i18n="statTeam">FRC 队号</span></article>
+        <article><strong>2019</strong><span data-i18n="statFounded">创队年份</span></article>
+        <article><strong>2</strong><span data-i18n="statEvents">2026 区域赛</span></article>
+        <article><strong>CAD</strong><span data-i18n="statArchive">核心档案</span></article>
+      </section>
+
+      <section class="system-story" id="systems">
+        <div class="section-copy">
+          <p class="eyebrow" data-i18n="systemsKicker">Subsystem breakdown</p>
+          <h2 data-i18n="systemsTitle">像技术手册一样拆解机器人</h2>
+          <p data-i18n="systemsText">
+            这一部分把完整机器人拆成底盘、拾取、Hopper 转运和射球四个模块。每年更新新机器人时，只需要替换 CAD 渲染和模块说明。
+          </p>
+        </div>
+
+        <div class="system-grid">
+          <article class="system-card">
+            <img src="./assets/generated-renders/robot-drive-sw-composite.png?v=20260719-sameview2" alt="Drivebase CAD highlight" />
+            <div class="system-card-copy">
+              <span>01 / Drivetrain</span>
+              <h3 data-i18n="driveTitle">27 × 27 英寸全向底盘</h3>
+              <p data-i18n="driveBody">底盘采用 SDS MK5n swerve，在为整机球路留出空间的同时保持灵活的场上移动能力。</p>
+              <ul class="system-detail-list">
+                <li data-i18n="driveDetailOne">1/16 英寸减重开孔底板承载电池与电控；上方 Roller Floor 可整体翻起，快速露出维护区域。</li>
+                <li data-i18n="driveDetailTwo">底盘两侧设置塑料滑条，帮助机器人更平顺地越过场地 Bump。</li>
+                <li data-i18n="driveDetailThree">保险杠使用 WCP 锥形安装座，聚碳酸酯内壁同时约束并支撑可展开 Hopper。</li>
+              </ul>
+            </div>
+          </article>
+          <article class="system-card">
+            <img src="./assets/generated-renders/robot-pickup-sw-composite.png?v=20260719-sameview2" alt="Pickup CAD highlight" />
+            <div class="system-card-copy">
+              <span>02 / Pickup</span>
+              <h3 data-i18n="pickupTitle">全宽翻转式拾取机构</h3>
+              <p data-i18n="pickupBody">全宽 Slapdown Intake 由一台 Kraken X60 和紧凑型 MAXSpline 齿轮箱驱动展开，在缩小收纳空间的同时保持快速响应。</p>
+              <ul class="system-detail-list">
+                <li data-i18n="pickupDetailOne">两台 X60 驱动 2 英寸硅胶包覆碳纤维主滚筒，并配合 1.25 英寸碳纤维 Kicker Bar 快速把球送入机器人。</li>
+                <li data-i18n="pickupDetailTwo">两根套有 0.625 英寸碳纤维管的六角轴与 3D 打印惰轮隔套共同导球，避免球再次接触主滚筒。</li>
+                <li data-i18n="pickupDetailThree">1/8 英寸厚的 2 × 1 英寸铝制防撞梁与可快速更换的 SRPP 侧板共同承受正面冲击。</li>
+              </ul>
+            </div>
+          </article>
+          <article class="system-card">
+            <img src="./assets/generated-renders/robot-hopper-sw-composite.png?v=20260719-sameview2" alt="Hopper CAD highlight" />
+            <div class="system-card-copy">
+              <span>03 / Hopper</span>
+              <h3 data-i18n="hopperTitle">扩展式 Hopper 与 Roller Floor</h3>
+              <p data-i18n="hopperBody">Hopper 由随拾取机构运动的水平扩展段和安装在攀爬结构上的竖直扩展段组成，使用 #25 链条与一台 Kraken X60 控制升降。</p>
+              <ul class="system-detail-list">
+                <li data-i18n="hopperDetailOne">侧面采用 1/8 英寸聚碳酸酯，前部使用双层瓦楞塑料，并通过折弯金属角件、VHB 与铆钉连接。</li>
+                <li data-i18n="hopperDetailTwo">侧板斜槽和定制法兰隔柱协调扩展动作；连接攀爬结构的方管与折弯挡板把球保留在 Shooter 一侧。</li>
+                <li data-i18n="hopperDetailThree">下方 Roller Floor 由 5 根 1 英寸死轴滚筒和 3 根 2 英寸 Flex Wheel 滚筒组成，通过逐步增大的倾角减少卡球并提高输送效率。</li>
+              </ul>
+            </div>
+          </article>
+          <article class="system-card">
+            <img src="./assets/generated-renders/robot-shooter-sw-composite.png?v=20260719-sameview2" alt="Shooter CAD highlight" />
+            <div class="system-card-copy">
+              <span>04 / Shooter</span>
+              <h3 data-i18n="shooterTitle">全宽 Ball Tunnel 与可调射球机构</h3>
+              <p data-i18n="shooterBody">两块相距 25 英寸的 3/16 英寸铝制侧板构成全宽 Ball Tunnel，把 Roller Floor 送来的球预加速至约 70% 的出射速度。</p>
+              <ul class="system-detail-list">
+                <li data-i18n="shooterDetailOne">Ball Tunnel 使用两台 X60 和 1.25 英寸死轴背压滚筒；独立 X60 驱动 2 英寸 Feeder Roller 将球送至竖直路径。</li>
+                <li data-i18n="shooterDetailTwo">3.5 英寸铝制主射球滚筒与三根 Hood Roller 机械联动，接触面使用滑板砂带，并由四台 X60 提供远距离射球功率。</li>
+                <li data-i18n="shooterDetailThree">Hood 由一台 Kraken X44 驱动，并通过横跨机器人的 Jackshaft 传递扭矩，实现宽范围出射角调节。</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="compare-section" id="iterations">
+        <div class="section-copy">
+          <p class="eyebrow" data-i18n="iterationsKicker">Robot evolution / iteration</p>
+          <h2 data-i18n="iterationsTitle">两次迭代，看见结构如何收敛</h2>
+          <p data-i18n="iterationsText">
+            从第一版的侧视布局到第二版更紧凑的机构整合，拖动对比两次方案在包装空间、传动结构和维护路径上的变化。
+          </p>
+        </div>
+
+        <div class="compare-card">
+          <div class="compare-stage" id="compareStage">
+            <img src="./assets/robot-iteration-v1.png" alt="First robot design iteration side view" />
+            <img class="compare-overlay" id="compareOverlay" src="./assets/robot-iteration-v2.png" alt="Second robot design iteration side view" />
+            <span class="iteration-label iteration-label-left" data-i18n="iterationTwoLabel">02 / 第二次迭代</span>
+            <span class="iteration-label iteration-label-right" data-i18n="iterationOneLabel">01 / 第一次迭代</span>
+            <span class="compare-line" aria-hidden="true"></span>
+          </div>
+          <input id="compareSlider" class="compare-slider" type="range" min="0" max="100" value="50" aria-label="Compare the second and first robot design iterations" />
+          <p data-i18n="compareCaption">拖动滑块：左侧第二次迭代 / 右侧第一次迭代</p>
+        </div>
+      </section>
+
+      <section class="software" id="software">
+        <div class="section-copy">
+          <p class="eyebrow" data-i18n="softwareKicker">Software and data</p>
+          <h2 data-i18n="softwareTitle">从子系统到自动模式</h2>
+          <p data-i18n="softwareText">
+            8011 使用 WPILib Command-Based 架构，把每个机构、单项动作和完整得分流程分层组织，让裁判能从场上表现一路看懂程序如何协同机器人。
+          </p>
+        </div>
+
+        <nav class="software-chapters" aria-label="Software presentation chapters">
+          <a href="#software-systems"><span>01</span><strong data-i18n="chapterSystems">核心系统</strong></a>
+          <a href="#software-commands"><span>02</span><strong data-i18n="chapterCommands">核心指令</strong></a>
+          <a href="#software-design"><span>03</span><strong data-i18n="chapterDesign">关键设计</strong></a>
+          <a href="#software-auto"><span>04</span><strong data-i18n="chapterAuto">自动模式</strong></a>
+        </nav>
+
+        <div class="architecture-intro">
+          <div class="software-block-heading">
+            <p class="eyebrow">COMMAND-BASED ARCHITECTURE</p>
+            <h3 data-i18n="architectureTitle">先看懂程序怎样组织机器人</h3>
+            <p data-i18n="architectureText">我们把程序分成三层：机构负责硬件，指令定义动作，复合指令把多个动作编排成裁判在场上看到的完整流程。</p>
+          </div>
+          <div class="architecture-flow">
+            <article>
+              <span>01 / SUBSYSTEM</span>
+              <h4 data-i18n="subsystemTitle">子系统</h4>
+              <p data-i18n="subsystemText">对应一个真实机构，例如底盘、拾取、转运或射球，集中管理电机、传感器和状态。</p>
+            </article>
+            <article>
+              <span>02 / COMMAND</span>
+              <h4 data-i18n="commandTitle">指令</h4>
+              <p data-i18n="commandText">告诉某个机构执行一个明确动作，例如设定飞轮转速、放下拾取或转向目标。</p>
+            </article>
+            <article>
+              <span>03 / COMPLEX COMMAND</span>
+              <h4 data-i18n="complexCommandTitle">复合指令</h4>
+              <p data-i18n="complexCommandText">把多个机构按顺序或并行组合，形成取球、移动、瞄准和射球的完整得分流程。</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="software-block" id="software-systems">
+          <div class="software-block-heading numbered-heading">
+            <span>01</span>
+            <div>
+              <p class="eyebrow">CORE SYSTEMS</p>
+              <h3 data-i18n="coreSystemsTitle">五个核心系统</h3>
+              <p data-i18n="coreSystemsText">每个子系统只管理自己的硬件和闭环状态，再通过指令层与其他机构协同。</p>
+            </div>
+          </div>
+          <div class="system-stack-grid">
+            <article><span>DRIVETRAIN</span><h4 data-i18n="systemDriveTitle">全向底盘</h4><p data-i18n="systemDriveText">四轮 swerve 支持场地坐标控制；PathPlanner 跟随自动路径，并按联盟颜色自动镜像。</p></article>
+            <article><span>SHOOTER</span><h4 data-i18n="systemShooterTitle">射球机构</h4><p data-i18n="systemShooterText">依据实测距离表计算飞轮速度与俯仰角，移动射球时补偿底盘 X / Y 方向速度。</p></article>
+            <article><span>FEEDER</span><h4 data-i18n="systemFeederTitle">送球机构</h4><p data-i18n="systemFeederText">双通道完成上送与后送；电流过高时停止送料防止卡球，LaserCAN 检测预装球是否到位。</p></article>
+            <article><span>GROUND INTAKE</span><h4 data-i18n="systemIntakeTitle">地面取球</h4><p data-i18n="systemIntakeText">利用堵转电流寻找机械零点，再运动到经过测试的展开位置，滚轮完成地面取球。</p></article>
+            <article><span>VISION</span><h4 data-i18n="systemVisionTitle">视觉系统</h4><p data-i18n="systemVisionText">三台 Limelight 从不同方向识别 AprilTag；MegaTag2 位姿与里程计融合，为路径和自动瞄准提供位置。</p></article>
+          </div>
+        </div>
+
+        <div class="software-block" id="software-commands">
+          <div class="software-block-heading numbered-heading">
+            <span>02</span>
+            <div>
+              <p class="eyebrow">CORE COMMANDS</p>
+              <h3 data-i18n="coreCommandsTitle">把机构变成场上动作</h3>
+              <p data-i18n="coreCommandsText">核心指令以“裁判能看到什么”为目标：瞄准、取球与射球流程都能独立触发，也能被自动程序复用。</p>
+            </div>
+          </div>
+          <div class="command-list">
+            <article>
+              <span>REAL TIME AIM DRIVE</span>
+              <h4 data-i18n="aimCommandTitle">移动中实时瞄准</h4>
+              <p data-i18n="aimCommandText">右扳机触发后，视觉位姿与 HUB 目标位置形成航向误差，PID 在机器人移动时持续修正朝向。</p>
+              <strong data-i18n="aimCommandResult">场上效果：驾驶员保持移动，机器人自动面向目标。</strong>
+            </article>
+            <article>
+              <span>INTAKE COMMANDS</span>
+              <h4 data-i18n="intakeCommandTitle">按场地区域取球</h4>
+              <p data-i18n="intakeCommandText">Intake Next To Hub、Wall 与 Side 将不同位置的取球动作封装为可重复调用的指令。</p>
+              <strong data-i18n="intakeCommandResult">场上效果：一键执行对应区域的取球动作。</strong>
+            </article>
+            <article>
+              <span>COMPLEX COMMANDS</span>
+              <h4 data-i18n="scoreCommandTitle">组合完整得分流程</h4>
+              <p data-i18n="scoreCommandText">ShootWithFeeder、PassTrench 与 BackShootGo 按顺序或并行协调飞轮、送料、取球和底盘。</p>
+              <strong data-i18n="scoreCommandResult">场上效果：多个机构一次触发、按状态自动衔接。</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="software-block" id="software-design">
+          <div class="software-block-heading numbered-heading">
+            <span>03</span>
+            <div>
+              <p class="eyebrow">KEY DESIGN</p>
+              <h3 data-i18n="keyDesignTitle">为比赛可靠性设计</h3>
+              <p data-i18n="keyDesignText">这些设计让同一套程序在不同联盟、不同速度和不同球路状态下保持一致行为。</p>
+            </div>
+          </div>
+          <div class="design-grid">
+            <article><span>ALLIANCE ADAPTIVE</span><h4 data-i18n="allianceTitle">联盟自适应</h4><p data-i18n="allianceText">自动识别红蓝方并翻转场地坐标系，一套路径逻辑适配两侧比赛。</p></article>
+            <article><span>MOVING SHOT</span><h4 data-i18n="movingShotTitle">移动射球补偿</h4><p data-i18n="movingShotText">分解底盘 X / Y 速度，预测释放球时的位置并补偿瞄准角度与射球速度。</p></article>
+            <article><span>SENSOR PROTECTION</span><h4 data-i18n="protectionTitle">传感保护</h4><p data-i18n="protectionText">送料电流用于防卡球，LaserCAN 确认预装球，拾取堵转电流用于建立机械零点。</p></article>
+            <article><span>LAYERED CONTROL</span><h4 data-i18n="layeredTitle">分层架构</h4><p data-i18n="layeredText">底层子系统控制硬件，中层指令定义动作，上层复合指令编排完整流程。</p></article>
+          </div>
+        </div>
+
+        <div class="software-block auto-block" id="software-auto">
+          <div class="software-block-heading numbered-heading">
+            <span>04</span>
+            <div>
+              <p class="eyebrow">AUTONOMOUS MODE</p>
+              <h3 data-i18n="autoModeTitle">自动模式</h3>
+              <p data-i18n="autoModeText">路径点用 X、Y、朝向角和移动速度四项数据描述；坐标与动作逻辑分离，让路线更容易修改和复用。</p>
+            </div>
+          </div>
+          <div class="auto-run-grid" aria-label="Three autonomous routine simulations">
+            <figure class="auto-run-card">
+              <img src="./assets/auto-program-1.gif?v=20260720-auto3" alt="8011 autonomous routine 01 simulation" />
+              <figcaption>
+                <span>ADVANTAGESCOPE / 01</span>
+                <strong data-i18n="autoRoutineOne">自动程序 01</strong>
+              </figcaption>
+            </figure>
+            <figure class="auto-run-card">
+              <img src="./assets/auto-program-2.gif?v=20260720-auto3" alt="8011 autonomous routine 02 simulation" />
+              <figcaption>
+                <span>ADVANTAGESCOPE / 02</span>
+                <strong data-i18n="autoRoutineTwo">自动程序 02</strong>
+              </figcaption>
+            </figure>
+            <figure class="auto-run-card">
+              <img src="./assets/auto-program-3.gif?v=20260720-auto3" alt="8011 autonomous routine 03 simulation" />
+              <figcaption>
+                <span>ADVANTAGESCOPE / 03</span>
+                <strong data-i18n="autoRoutineThree">自动程序 03</strong>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="auto-summary">
+            <div class="auto-summary-copy">
+              <p class="eyebrow">PATH POINT = X / Y / HEADING / SPEED</p>
+              <h3 data-i18n="autoTitle">路径与动作协同</h3>
+              <p data-i18n="autoText">程序预加载路线并根据联盟颜色完成镜像。机器人沿路径取球时提前预热飞轮，到达射击区域后由视觉与航向 PID 自动修正，再送料完成射球。</p>
+            </div>
+            <div class="software-facts">
+              <div><strong>7</strong><span data-i18n="autoFactRoutes">套比赛路线</span></div>
+              <div><strong>20 ms</strong><span data-i18n="autoFactLoop">调度周期预算</span></div>
+              <div><strong>2×</strong><span data-i18n="autoFactMirror">红蓝联盟镜像</span></div>
+            </div>
+          </div>
+
+          <div class="program-map" aria-labelledby="programFlowTitle">
+            <div class="program-map-heading">
+              <p class="eyebrow">AUTONOMOUS SCORING CYCLE</p>
+              <h3 id="programFlowTitle" data-i18n="programFlowTitle">一次自动得分循环</h3>
+              <p data-i18n="programFlowText">从路线加载到下一次循环，每一步都对应真实程序中的状态判断与命令组合。</p>
+            </div>
+            <div class="program-flow six-step">
+              <article><span>01</span><strong data-i18n="flowPreloadTitle">加载并镜像路线</strong><p data-i18n="flowPreloadText">按联盟与起始侧生成路径。</p></article>
+              <article><span>02</span><strong data-i18n="flowPickupTitle">取球并沿路径移动</strong><p data-i18n="flowPickupText">拾取、转运与底盘并行运行。</p></article>
+              <article><span>03</span><strong data-i18n="flowWarmupTitle">提前预热飞轮</strong><p data-i18n="flowWarmupText">抵达射击点前达到目标转速。</p></article>
+              <article><span>04</span><strong data-i18n="flowVisionTitle">视觉更新位姿</strong><p data-i18n="flowVisionText">AprilTag 观测融合里程计。</p></article>
+              <article><span>05</span><strong data-i18n="flowAimTitle">PID 自动瞄准</strong><p data-i18n="flowAimText">路径有偏差时仍修正朝向。</p></article>
+              <article><span>06</span><strong data-i18n="flowShootTitle">送料并继续循环</strong><p data-i18n="flowShootText">达到速度与角度后完成射球。</p></article>
+            </div>
+          </div>
+
+          <div class="auto-advantages">
+            <article><span>01</span><p data-i18n="autoAdvOne">坐标与动作逻辑分离，修改路线只需调整路径数组。</p></article>
+            <article><span>02</span><p data-i18n="autoAdvTwo">红蓝方自动镜像，一套代码适配两侧比赛。</p></article>
+            <article><span>03</span><p data-i18n="autoAdvThree">动作支持顺序、并行与竞争组合。</p></article>
+            <article><span>04</span><p data-i18n="autoAdvFour">条件判断与提前退出避免自动流程卡死。</p></article>
+            <article><span>05</span><p data-i18n="autoAdvFive">飞轮提前预热，抵达射击点时已接近目标转速。</p></article>
+            <article><span>06</span><p data-i18n="autoAdvSix">视觉自瞄实时修正路径误差。</p></article>
+          </div>
+        </div>
+
+        <div class="software-actions">
+          <a class="download-action" href="./assets/FRC_8011_2026-PID.zip" download>
+            <span>ZIP / WPILIB C++</span>
+            <strong data-i18n="downloadCode">下载 8011 机器人程序</strong>
+          </a>
+        </div>
+
+        <a class="scouting-band" href="http://43.138.214.227/" target="_blank" rel="noreferrer">
+          <div>
+            <p class="eyebrow">8011 EAGLEEYE</p>
+            <h3 data-i18n="scoutingTitle">数据侦察系统</h3>
+            <p data-i18n="scoutingText">从赛程分配、现场记录和数据质量检查，到单队分析、选队清单与联盟模拟，形成完整的比赛决策链路。</p>
+            <strong class="text-link" data-i18n="openScouting">打开 8011 EagleEye 数据侦察系统 →</strong>
+          </div>
+          <img src="./assets/scouting-overview.gif?v=20260719-software1" alt="8011 EagleEye scouting system animated overview" />
+        </a>
+      </section>
+
+      <section class="resources" id="resources">
+        <div class="section-copy">
+          <p class="eyebrow" data-i18n="resourcesKicker">Resources</p>
+          <h2 data-i18n="resourcesTitle">CAD、图纸与链接</h2>
+        </div>
+        <div class="resource-grid">
+          <a href="https://cad.onshape.com/documents/e1d25d5650a405f349ec8c66/w/9c63cc045b9d70f7251ee18c/e/6b01c8fe42c78bceee13c0c5" target="_blank" rel="noreferrer">
+            <strong data-i18n="onshapeTitle">Onshape 最新模型</strong>
+            <span>cad.onshape.com</span>
+          </a>
+          <a href="./assets/intake-pulley.pdf">
+            <strong data-i18n="pulleyTitle">拾取同步轮图纸</strong>
+            <span>intake-pulley.pdf</span>
+          </a>
+          <a href="./assets/intake-roller-plug.pdf">
+            <strong data-i18n="plugTitle">拾取滚筒金属件图纸</strong>
+            <span>intake-roller-plug.pdf</span>
+          </a>
+          <a href="https://frc-events.firstinspires.org/2026/team/8011" target="_blank" rel="noreferrer">
+            <strong data-i18n="firstTitle">FIRST 官方队伍页</strong>
+            <span>frc-events.firstinspires.org</span>
+          </a>
+          <a href="./assets/FRC_8011_2026-PID.zip" download>
+            <strong data-i18n="programSourceTitle">机器人程序源码</strong>
+            <span>FRC_8011_2026-PID.zip</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Team 8011 Guangzhou WA-YI / 2026 Robot Technical Binder</p>
+      <a href="#top" data-i18n="backTop">返回顶部</a>
+    </footer>
+
+    <script src="./script.js?v=20260720-systemdetail1"></script>
+  </body>
+</html>
